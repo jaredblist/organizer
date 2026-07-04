@@ -1,0 +1,103 @@
+.menu {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 2px 0px 10px 2px #000, -1px 0px 10px 1px #000;
+    overflow: auto;
+
+    background-color: var(--background-default);
+    color: var(--foreground-default);
+}
+
+
+.menuButton {
+    background: transparent;
+    color: var(--foreground-default);
+}
+
+.menuSelect {  
+  display: grid;
+  height: 90%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: stretch;
+  grid-template-areas:
+    "gadgets workshop"
+    "voltros battles"
+    "echoPrisms codex";
+}
+
+.gadgets {
+    grid-area: gadgets;
+}
+.workshop {
+    grid-area: workshop;
+}
+.voltros {
+    grid-area: voltros;
+}
+.battles {
+    grid-area: battles;
+}
+.echoPrisms {
+    grid-area: echoPrisms;
+}
+.codex {
+    grid-area: codex;
+}
+
+/*temporary probably*/
+.image {
+    width: 8rem;
+}
+
+.backButton {
+    position: fixed;
+    bottom: 20px; /* Adjust this for spacing */
+    left: 45.45%;
+    width: var(--back-button-width);
+    margin: 0;    
+    z-index: 5;
+}
+
+.paddingContainer {     
+    height: 100%;
+    overflow: auto;
+}
+
+.topLeftMenuItem {
+    border-top: none;
+    border-left: none;
+}
+
+.topRightMenuItem {
+    border-top: none;
+    border-right: none;
+}
+
+.bottomLeftMenuItem {
+    border-bottom: none;
+    border-left: none;
+}
+
+.bottomRightMenuItem {
+    border-bottom: none;
+    border-right: none;
+}
+
+.rightMenuItem {    
+    border-right: none;
+}
+
+.leftMenuItem {    
+    border-left: none;
+}
+
+/*.battle-background {
+  background: radial-gradient(
+    circle at center,
+    #3a5c50 0%,   
+    #304f43 40%,  
+    #1e2b26 100%  
+  );
+}*/

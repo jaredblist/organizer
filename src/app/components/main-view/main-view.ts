@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LookupService } from '../../services/utility/lookup-service';
+import { ComponentViewEnum } from '../../models/enums/component-view.model';
 
 @Component({
   selector: 'app-main-view',
@@ -8,4 +10,16 @@ import { Component } from '@angular/core';
 })
 export class MainView {
 
+  constructor(private lookupService:  LookupService) {
+
+  }
+
+  ngOnInit() {
+
+  }
+
+  goToView() {//view: MenuNavigationEnum
+    //this.lookupService.menuNavigation = view;
+    this.lookupService.componentView = ComponentViewEnum.Meals;
+  }
 }

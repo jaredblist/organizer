@@ -1,5 +1,6 @@
 <div class="paddingContainer">
     <div class="menu menu-bg">
+        @if (lookupService.componentView === componentViewEnum.Main) {      
         <div class="menuSelect">
             <button class="topLeftMenuItem menuButton gadgets" (click)="goToView()"><img class="image"
                     src="hadesHeraDuo.png"> 
@@ -9,31 +10,38 @@
             <button class="topRightMenuItem menuButton workshop" (click)="goToView()"><img class="image"
                     src="apolloHadesDuo.png"> 
                     <br/>
-                <span class="tHeading">Foundry</span>
+                <span class="tHeading">Groceries</span>
             </button>
                 <button class="bottomRightMenuItem menuButton codex" (click)="goToView()"><img class="image"
                     src="aresAthenaDuo.svg"> 
                     <br/>
-                <span class="tHeading">Codex</span>                
-            </button>
-            <br />
+                <span class="tHeading">??</span>                
+            </button>            
             <button class="leftMenuItem menuButton voltros" (click)="goToView()"><img class="image"
                     src="dionysusArtemisDuo.png"> 
                     <br/>
-                <span class="tHeading">Voltros</span>
+                <span class="tHeading">Ingredients</span>
             </button>
                 <button class="rightMenuItem menuButton battles" (click)="goToView()"><img class="image"
                     src="aphroditeHermesDuo.svg"> 
                     <br/>
-                <span class="tHeading">Battles</span>
-            </button>
-            <br />
+                <span class="tHeading">What Can I Cook?</span>
+            </button>            
             <button class="bottomLeftMenuItem menuButton echoPrisms" (click)="goToView()"><img class="image"
                     src="heraPoseidonDuo.svg"> 
                     <br/>
-                <span class="tHeading">Echo Prisms</span>
-            </button>
-                
+                <span class="tHeading">Weekly</span>
+            </button>                
         </div>
+    }
+
+        @if (lookupService.componentView === componentViewEnum.Meals) {      
+            <app-meals-view></app-meals-view>
+        }  
+        
+        <div class="return">
+            <button class="buttonStyled backButton" (click)="goBack()" *ngIf="showBackButton()">X</button>
+        </div>
+        
     </div>
 </div>

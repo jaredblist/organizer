@@ -5,5 +5,5 @@ import { ComponentViewEnum } from '../../models/enums/component-view.model';
   providedIn: 'root',
 })
 export class LookupService {
-  public componentView = ComponentViewEnum.None;
+  public componentView = ComponentViewEnum.Main;
 }

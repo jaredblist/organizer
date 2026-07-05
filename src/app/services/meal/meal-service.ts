@@ -20,7 +20,7 @@ export class MealService {
         collection(db, 'meals')
     );
 
-    return snapshot.docs.map(d => d.data());
+    return snapshot.docs.map(d => d.data() as Meal);
   }
   
   async getMeal(name: string) {

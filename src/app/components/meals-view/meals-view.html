@@ -1,1 +1,28 @@
-<p>meals-view works!</p>
+<div class="view">
+    <h2 class="title textCentered">
+        Meals
+    </h2>
+    <div class="filters">
+        Filters
+    </div>
+    <div class="list">
+        <table>
+            @for (cells of mealRows; track $index) {
+            <tr>
+                @for (c of cells; track $index; let i = $index) {
+                <td class="item tHeading">
+                    <div class="mealList" (click)="goToMealPage(c)">
+                        <div class="verticalFlex">
+                            <img class="image" [src]="getMealImage(c)">
+                            <div class="title tHeading">
+                                {{ c.name.toLowerCase() }}
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                }
+            </tr>
+            }
+        </table>
+    </div>
+</div>

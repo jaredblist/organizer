@@ -17,7 +17,7 @@
 
 .menuSelect {  
   display: grid;
-  height: 90%;
+  height: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: stretch;
@@ -92,12 +92,3 @@
 .leftMenuItem {    
     border-left: none;
 }
-
-/*.battle-background {
-  background: radial-gradient(
-    circle at center,
-    #3a5c50 0%,   
-    #304f43 40%,  
-    #1e2b26 100%  
-  );
-}*/

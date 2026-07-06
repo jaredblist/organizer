@@ -1,1 +1,34 @@
-<p>individual-meal-view works!</p>
+<div class="individualMealView">
+    <h2 class="title">
+        {{selectedMeal.name}}
+    </h2>
+    <div class="options">
+        <button>Add to groceries</button>
+    </div>
+    <div class="ingredients">
+        <div class="viewIngredientsMode">
+            @for (ingredient of selectedMeal.ingredients; track $index) {
+            <span>{{ingredient.amount}} {{ingredient.name}}</span>
+            }
+            <button (click)="toggleMode()">Edit ingredients</button>
+        </div>
+        <div class="editIngredientsMode">
+            @for (ingredient of selectedMeal.ingredients; track $index) {
+            <!--need to figure out how to iterate this, ask chatgpt -->
+            <!--<input type="text" maxlength="15" [(ngModel)]="ingredient.amount" />
+                <input type="text" maxlength="15" [(ngModel)]="ingredient.name" />-->
+            }
+            <button (click)="saveIngredients()">Save ingredients</button>
+        </div>
+    </div>
+    <img class="image" [src]="getMealImage()">
+    <div class="description">
+        Brown & drain sausage
+        Cook diced onion in salted butter in a stock pot over low heat until just beginning to caramelize
+        Add garlic to pot and cook until fragrant, approx. 2 minutes
+        Add crushed and diced tomatoes, sugar, herbs, salt, and pepper. Simmer together for around 30 minutes, allowing
+        sauce to thicken. Stir often to prevent burning on the bottom or splattering.
+        If cooking pasta, add ¼ cup pasta water to the sauce.
+
+    </div>
+</div>

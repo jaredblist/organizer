@@ -1,6 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainView } from './components/main-view/main-view';
+import { LookupService } from './services/utility/lookup-service';
+import { InitializationService } from './services/utility/initialization-service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +12,13 @@ import { MainView } from './components/main-view/main-view';
 })
 export class App {
   protected readonly title = signal('organizer');
+
+  constructor(private initializationService: InitializationService)
+  {
+
+  }
+
+  ngOnInit() {
+    this.initializationService.preloadData();
+  }
 }

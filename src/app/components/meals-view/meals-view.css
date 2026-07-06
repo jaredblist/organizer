@@ -1,7 +1,7 @@
 
-.view {  
+.mealsView {  
   display: grid;
-  height: 90%;
+  height: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 1rem;
@@ -24,6 +24,10 @@
     grid-area: list;
 }
 
+.image {
+    width: 6rem;
+    height: 6rem;
+}
 
 table tr td:nth-child(3n) {
     border-right: none;

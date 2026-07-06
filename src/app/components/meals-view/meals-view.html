@@ -1,4 +1,5 @@
-<div class="view">
+@if (selectedMeal === undefined) {
+<div class="mealsView">
     <h2 class="title textCentered">
         Meals
     </h2>
@@ -26,3 +27,7 @@
         </table>
     </div>
 </div>
+}
+@else {
+<app-individual-meal-view [selectedMeal]="selectedMeal"></app-individual-meal-view>
+}

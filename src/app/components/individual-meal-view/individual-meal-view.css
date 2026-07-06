@@ -1,0 +1,33 @@
+.individualMealView {  
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  justify-content: stretch;
+  grid-template-areas:
+    "title title"
+    "options options"
+    "ingredients image"
+    "description description";
+}
+
+.title {
+    grid-area: title;
+}
+
+.options {
+    grid-area: options;
+}
+
+.ingredients {
+    grid-area: ingredients;
+}
+
+.image {
+    grid-area: image;
+}
+
+.description {
+    grid-area: description;
+}

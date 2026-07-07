@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Meal } from '../../models/meals/meal.model';
 import { LookupService } from '../../services/utility/lookup-service';
+import { GroceryService } from '../../services/groceries/grocery-service';
 
 @Component({
   selector: 'app-individual-meal-view',
@@ -12,7 +13,7 @@ export class IndividualMealView {
   @Input() selectedMeal: Meal;
   editIngredients = false;
 
-  constructor(private lookupService: LookupService)
+  constructor(private lookupService: LookupService, private groceryService: GroceryService)
   {
 
   }
@@ -31,7 +32,10 @@ export class IndividualMealView {
 
   saveIngredients() {
     
-
     this.toggleMode();
+  }
+
+  addToGroceries() {
+    this.groceryService.addToGroceries(this.selectedMeal);
   }
 }

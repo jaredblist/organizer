@@ -12,35 +12,33 @@ import { Meal } from '../../models/meals/meal.model';
 
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class MealService {
-  async getAllMeals() {
-    const snapshot = await getDocs(
-        collection(db, 'meals')
-    );
+    async getAllMeals() {
+        const snapshot = await getDocs(
+            collection(db, 'meals')
+        );
 
-    return snapshot.docs.map(d => d.data() as Meal);
-  }
-  
-  async getMeal(name: string) {
+        return snapshot.docs.map(d => d.data() as Meal);
+    }
 
-    const snapshot = await getDoc(
-        doc(db, 'meals', name)
-    );
+    async getMeal(name: string) {
 
-    return snapshot.exists()
-        ? snapshot.data()
-        : null;
+        const snapshot = await getDoc(
+            doc(db, 'meals', name)
+        );
 
-  }
+        return snapshot.exists()
+            ? snapshot.data()
+            : null;
 
-async saveMeal(meal: Meal) {
+    }
 
-    await setDoc(
-        doc(db, 'meals', meal.name),
-        meal
-    );
-
-}
+    async saveMeal(meal: Meal) {
+        await setDoc(
+            doc(db, 'meals', meal.name),
+            meal
+        );
+    }
 }

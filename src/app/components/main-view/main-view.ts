@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { LookupService } from '../../services/utility/lookup-service';
 import { ComponentViewEnum } from '../../models/enums/component-view.model';
-import { NgIf } from '@angular/common';
 import { MealsView } from '../meals-view/meals-view';
+import { GroceriesView } from '../groceries-view/groceries-view';
 
 @Component({
   selector: 'app-main-view',
-  imports: [NgIf, MealsView],
+  imports: [MealsView, GroceriesView],
   templateUrl: './main-view.html',
   styleUrl: './main-view.css',
 })
@@ -25,9 +25,9 @@ export class MainView {
 
   }
 
-  goToView() {//view: MenuNavigationEnum
-    //this.lookupService.menuNavigation = view;
-    this.lookupService.componentView = ComponentViewEnum.Meals;
+  goToView(view: ComponentViewEnum) {//
+    this.lookupService.componentView = view;
+    //this.lookupService.componentView = ComponentViewEnum.Meals;
   }
 
   goBack() {

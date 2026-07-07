@@ -1,3 +1,7 @@
-<div>
-    
+<div class="groceriesView">
+    <div>
+            @for (item of groceryList?.groceryItems; track $index) {
+            <span>{{item.amount}} {{item.name}}</span>
+            }            
+        </div>
 </div>

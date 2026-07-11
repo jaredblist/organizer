@@ -1,7 +1,24 @@
 <div class="groceriesView">
-    <div>
-            @for (item of groceryList?.groceryItems; track $index) {
-            <span>{{item.amount}} {{item.name}}</span>
-            }            
+    @for (category of categories; track $index) {
+    <div class="category">
+        <div class="categoryName">{{category.name}}</div>
+        @for (item of getItemsForCategory(category.name); track $index) {
+        <div class="ingredient" [class.checked]="item.checked" (click)="toggleItem(item)">
+            <span class="ingredientCheck">
+                <input type="checkbox" [checked]="item.checked" (click)="$event.stopPropagation()"
+                    (change)="itemCheckedChanged(item, $event)">
+            </span>
+            <span class="ingredientAmount">
+                {{item.amount}}
+            </span>
+            <span class="ingredientName">
+                {{item.name}}
+            </span>
+            <span class="ingredientTags">
+
+            </span>
         </div>
+        }
+    </div>
+    }
 </div>

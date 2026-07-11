@@ -20,16 +20,25 @@ body {
 :root {
     /* Colors */
     /** Green Version **/
-    --foreground-default: #E9EDF6;
-    --foreground-button: #fde4f1cc;
+    --foreground-default: #000; /*#E9EDF6;*/
+    --foreground-button: #fde4f1cc;/*#fde4f1cc;*/
 
-    --background-default: #304f43;
+    --background-default: #349498;
+    --background-secondary: #90d6d9;
+    --background-row: #bce8e6;
+    --background-row-alternate: #e2f4f5;
+    --background-accent: #e8bebc;
+    --background-disabled: #888;
+
+    /*--background-default: #304f43;
     --background-secondary: #38ab88;
     --background-secondary-gradient-end: #27785f;
     --background-modal: #2A3D35;
     --background-modal-card: #cde099aa;
     --background-border: #121f1a;
     --resonance-background: #1a242b;
+
+    */  
 
     --background-button-color-gradient-start: #e60073;
     --background-button-color-gradient-end: #99004d;
@@ -333,8 +342,7 @@ body {
     font-weight: var(--s1-weight);
     font-variant: small-caps;
     text-transform: uppercase;
-    font-family: "BrunoAceSC", sans-serif;
-    text-shadow: 1px 1px 0px black, 0px 0px 2px black, 1px 1px 2px black;
+    font-family: "BrunoAceSC", sans-serif;    
 }
 
 .s2Heading {
@@ -342,8 +350,7 @@ body {
     font-weight: var(--s2-weight);
     font-variant: small-caps;
     text-transform: uppercase;
-    font-family: "BrunoAceSC", sans-serif;
-    text-shadow: 1px 1px 0px black, 0px 0px 2px black, 1px 1px 2px black;
+    font-family: "BrunoAceSC", sans-serif;    
 }
 
 .s3Heading {
@@ -364,8 +371,7 @@ body {
     font-weight: var(--s4-weight);
     font-variant: small-caps;
     text-transform: uppercase;
-    font-family: "BrunoAceSC", sans-serif;
-    text-shadow: 1px 1px 0px black, 0px 0px 2px black, 1px 1px 2px black;
+    font-family: "BrunoAceSC", sans-serif;    
 }
 
 .tHeading {
@@ -373,8 +379,7 @@ body {
     font-weight: var(--t-weight);
     font-variant: small-caps;
     text-transform: uppercase;
-    font-family: "BrunoAceSC", sans-serif;
-    text-shadow: 1px 1px 0px black, 0px 0px 2px black, 1px 1px 2px black;
+    font-family: "BrunoAceSC", sans-serif;    
 }
 
 .tooltipText {

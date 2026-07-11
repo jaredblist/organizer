@@ -5,6 +5,7 @@ import { db } from '../../firebaseconfig';
 import { Tag } from '../../models/meals/tag.model';
 import { Unit } from '../../models/meals/unit.model';
 import { MealService } from '../meal/meal-service';
+import { CategoryOption } from '../../models/meals/category-option.model';
 
 @Injectable({
   providedIn: 'root',
@@ -18,6 +19,7 @@ export class InitializationService {
     this.lookupService.globalVar.meals = await this.mealService.getAllMeals();
     this.lookupService.globalVar.tags = await this.getAllTags();
     this.lookupService.globalVar.units = await this.getAllUnits();
+    this.lookupService.globalVar.categories = await this.getAllCategories();
   }
 
   //need to add all tags and units from db, then you can display them in a dropdown
@@ -35,5 +37,13 @@ export class InitializationService {
       );
   
       return snapshot.docs.map(d => d.data() as Unit);
+    }
+
+    async getAllCategories() {
+      const snapshot = await getDocs(
+          collection(db, 'categoryOptions')
+      );
+  
+      return snapshot.docs.map(d => d.data() as CategoryOption);
     }
 }

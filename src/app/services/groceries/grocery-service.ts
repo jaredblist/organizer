@@ -32,4 +32,11 @@ export class GroceryService {
       }
     );  
   }
+
+  async saveGroceries(groceryList: GroceryList) {
+  await setDoc(
+    doc(db, 'groceryList', 'currentGroceries'),
+    groceryList
+  );
+}
 }

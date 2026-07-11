@@ -1,0 +1,54 @@
+.groceriesView {
+    margin: auto;
+}
+
+.category {
+    border: 1px solid #d8d8d8;    
+    overflow: hidden;
+}
+
+.categoryName {
+    background: var(--background-color);
+    color: white;
+    font-weight: 600;
+    padding: 12px 16px;
+    font-size: 1.1rem;
+}
+
+.ingredient {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 12px 16px;
+
+    border-bottom: 1px solid #ececec;
+}
+
+.ingredient:last-child {
+    border-bottom: none;
+}
+
+/* Alternating row colors */
+.ingredient:nth-child(even) {
+    background: var(--background-row);
+}
+
+.ingredient:nth-child(odd) {
+    background: var(--background-row-alternate);
+}
+
+.ingredientAmount {
+    width: 60px;
+    font-weight: 600;
+}
+
+.ingredientName {
+    flex: 1;
+}
+
+.checked {
+    opacity: .6;
+    text-decoration: line-through;
+    background: var(--background-disabled) !important;
+}

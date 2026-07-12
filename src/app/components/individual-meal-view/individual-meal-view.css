@@ -1,15 +1,16 @@
-.individualMealView {  
-  display: grid;
-  height: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
-  justify-content: stretch;
-  grid-template-areas:
-    "title title"
-    "options options"
-    "ingredients image"
-    "description description";
+.individualMealView {
+    margin: .5rem;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr 1fr;
+    gap: 1rem;
+    justify-content: stretch;
+    grid-template-areas:
+        "title title"
+        "options options"
+        "ingredients image"
+        "description description";
 }
 
 .title {
@@ -22,10 +23,14 @@
 
 .ingredients {
     grid-area: ingredients;
+    margin: auto 0;
 }
 
 .image {
-    grid-area: image;
+    grid-area: image;     
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: auto;
 }
 
 .description {

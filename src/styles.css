@@ -343,6 +343,13 @@ body {
     text-shadow: 1px 1px 0px black, 0px 0px 2px black;
 }
 
+.pageHeader {
+    font-size: 3rem;
+    margin: .5rem;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
 .buttonStyled {
     /*background-color: var(--background-button-color);*/
     background: radial-gradient(ellipse at center, var(--background-button-color-gradient-start), var(--background-button-color-gradient-end));

@@ -1,17 +1,21 @@
 <div class="individualMealView">
-    <h2 class="title">
+    <h2 class="pageHeader title textCentered">
         {{selectedMeal.name}}
     </h2>
-    <div class="options">
+    <div class="options textCentered">
         <button (click)="addToGroceries()">Add to groceries</button>
     </div>
     <div class="ingredients">
+        @if (!editIngredients) {
         <div class="viewIngredientsMode">
             @for (ingredient of selectedMeal.ingredients; track $index) {
             <span>{{ingredient.amount}} {{ingredient.name}}</span>
+            <br/>
             }
             <button (click)="toggleMode()">Edit ingredients</button>
         </div>
+    }
+    @if (editIngredients) {
         <div class="editIngredientsMode">
             @for (ingredient of selectedMeal.ingredients; track $index) {
             <!--need to figure out how to iterate this, ask chatgpt -->
@@ -20,6 +24,7 @@
             }
             <button (click)="saveIngredients()">Save ingredients</button>
         </div>
+    }
     </div>
     <img class="image" [src]="getMealImage()">
     <div class="description">

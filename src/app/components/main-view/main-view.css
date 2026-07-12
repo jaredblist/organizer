@@ -13,6 +13,10 @@
 .menuButton {
     background: transparent;
     color: var(--foreground-default);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .menuSelect {  

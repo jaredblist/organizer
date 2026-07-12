@@ -21,10 +21,12 @@ body {
     /* Colors */
     /** Green Version **/
     --foreground-default: #000; /*#E9EDF6;*/
+    --foreground-tertiary: #fff;
     --foreground-button: #fde4f1cc;/*#fde4f1cc;*/
 
     --background-default: #349498;
     --background-secondary: #90d6d9;
+    --background-tertiary: #25696c;
     --background-row: #bce8e6;
     --background-row-alternate: #e2f4f5;
     --background-accent: #e8bebc;
@@ -105,51 +107,6 @@ body {
 
     --resource-border: #24b286;
 
-    --rockColor: #8f907d;
-    --rockGlowColor: #c3d83c;
-    --rockColorRadialResonanceWindow: #8f907ddd;
-    --rockColorLinearResonanceWindow: #c3d83c80;
-    --rockBackgroundColor: #4f4930;
-    --waterColor: #08bbff;
-    --waterGlowColor: #91ddfa;
-    --waterColorRadialResonanceWindow: #08bbffdd;
-    --waterColorLinearResonanceWindow: #91ddfa80;
-    --waterBackgroundColor: #30424f;
-    --windColor: #e4e1de;
-    --windGlowColor: #ffffff;
-    --windColorRadialResonanceWindow: #e4e1dedd;
-    --windColorLinearResonanceWindow: #ffffff80;
-    --windBackgroundColor: #545454;
-    --lightningColor: #dfce12;
-    --lightningGlowColor: #f0f56c;
-    --lightningColorRadialResonanceWindow: #dfce12dd;
-    --lightningColorLinearResonanceWindow: #f0f56c80;
-    --lightningBackgroundColor: #626639;
-    --fireColor: #df742c;
-    --fireGlowColor: #ff0000;
-    --fireColorRadialResonanceWindow: #df742cdd;
-    --fireColorLinearResonanceWindow: #ff000080;
-    --fireBackgroundColor: #4f3030;
-    --natureColor: #3d9a31;
-    --natureGlowColor: #9ffd97;
-    --natureColorRadialResonanceWindow: #3d9a31dd;
-    --natureColorLinearResonanceWindow: #9ffd9780;
-    --natureBackgroundColor: #364f30;
-    --sunColor: #e68610;
-    --sunGlowColor: #f0e375;
-    --sunColorRadialResonanceWindow: #e68610dd;
-    --sunColorLinearResonanceWindow: #f0f56c9a;
-    --sunBackgroundColor: #623918;
-    --moonColor: #757aa8;
-    --moonGlowColor: #a889ec;
-    --moonColorRadialResonanceWindow: #757aa8dd;
-    --moonColorLinearResonanceWindow: #a889ec80;
-    --moonBackgroundColor: #41304f;
-    --iceColor: #31939a;
-    --iceGlowColor: #b3f4f1;
-    --iceColorRadialResonanceWindow: #31939add;
-    --iceColorLinearResonanceWindow: #b3f4f180;
-    --iceBackgroundColor: #304a4f;
 
     --tile-size: 9.5vh;
     /* Is this really the best way to handle it? */
@@ -328,7 +285,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Tektur Regular", serif;
+    font-family: "Arial", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 13px; /*3.2vmin*/
@@ -342,7 +299,7 @@ body {
     font-weight: var(--s1-weight);
     font-variant: small-caps;
     text-transform: uppercase;
-    font-family: "BrunoAceSC", sans-serif;    
+    font-family: "Arial", sans-serif;    
 }
 
 .s2Heading {
@@ -350,7 +307,7 @@ body {
     font-weight: var(--s2-weight);
     font-variant: small-caps;
     text-transform: uppercase;
-    font-family: "BrunoAceSC", sans-serif;    
+    font-family: "Arial", sans-serif;    
 }
 
 .s3Heading {
@@ -358,7 +315,7 @@ body {
     font-weight: var(--s3-weight);
     font-variant: small-caps;
     text-transform: uppercase;
-    font-family: "Tektur Bold", sans-serif;
+    font-family: "Arial", sans-serif;
 }
 
 .s4Heading {
@@ -371,7 +328,7 @@ body {
     font-weight: var(--s4-weight);
     font-variant: small-caps;
     text-transform: uppercase;
-    font-family: "BrunoAceSC", sans-serif;    
+    font-family: "Arial", sans-serif;    
 }
 
 .tHeading {
@@ -379,7 +336,7 @@ body {
     font-weight: var(--t-weight);
     font-variant: small-caps;
     text-transform: uppercase;
-    font-family: "BrunoAceSC", sans-serif;    
+    font-family: "Arial", sans-serif;    
 }
 
 .tooltipText {
@@ -394,7 +351,7 @@ body {
     font-size: var(--preferred-button-font-size);
     border-style: solid;
     font-variant: small-caps;
-    font-family: "BrunoAceSC", sans-serif;
+    font-family: "Arial", sans-serif;
     border-radius: 50px;
     box-shadow: 1px 1px var(--button-box-shadow-color), 0 0 2px var(--button-box-shadow-color), 1px 1px 5px var(--button-box-shadow-color),
         -1px -1px var(--button-box-shadow-color), 0 0 2px var(--button-box-shadow-color), -1px -1px 5px var(--button-box-shadow-color);

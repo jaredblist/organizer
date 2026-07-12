@@ -18,6 +18,10 @@
 
 .filters {
     grid-area: filters;
+    background-color: var(--background-tertiary);
+    color: var(--foreground-tertiary);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .list {

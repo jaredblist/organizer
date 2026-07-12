@@ -3,9 +3,9 @@
     <div class="category">
         <div class="categoryName">{{category.name}}</div>
         @for (item of getItemsForCategory(category.name); track $index) {
-        <div class="ingredient" [class.checked]="item.checked" (click)="toggleItem(item)">
+        <div class="ingredient" [class.checked]="item.checked">
             <span class="ingredientCheck">
-                <input type="checkbox" [checked]="item.checked" (click)="$event.stopPropagation()"
+                <input type="checkbox" [checked]="item.checked" (click)="toggleItem(item)"
                     (change)="itemCheckedChanged(item, $event)">
             </span>
             <span class="ingredientAmount">

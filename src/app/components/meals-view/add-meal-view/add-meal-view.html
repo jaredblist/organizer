@@ -1,0 +1,52 @@
+<form class="form" [formGroup]="mealForm" (ngSubmit)="saveMeal()">
+
+    <h2>Add Meal</h2>
+
+    <div class="form-field">
+        <label>Meal Name</label>
+
+        <input type="text" formControlName="name" placeholder="Meal Name">
+    </div>
+
+    <h3>Ingredients</h3>
+
+    <div formArrayName="ingredients">
+
+        @for (ingredient of ingredients.controls; track $index) {
+
+        <div class="ingredient-row" [formGroupName]="$index">
+
+
+            <input type="number" placeholder="Amt" formControlName="amount">
+
+            <select formControlName="unit">
+                <option value=""></option>
+
+                @for (unit of units; track $index) {
+                    <option [value]="unit.name">{{ unit.name }}</option>
+                }
+
+            </select>
+
+            <input type="text" placeholder="Ingredient" formControlName="name">
+
+            <button type="button" class="buttonStyled" (click)="removeIngredient($index)">
+                X
+            </button>
+
+        </div>
+        }
+
+    </div>
+
+    <button type="button" class="buttonStyled" (click)="addIngredient()">
+        + Add Ingredient
+    </button>
+
+    <hr>
+
+    <button class="buttonStyled" type="submit">
+        Save Meal
+    </button>
+
+</form>

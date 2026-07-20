@@ -1,8 +1,12 @@
 @if (selectedMeal === undefined) {
 <div class="mealsView">
-    <h2 class="pageHeader textCentered">
-        Meals
-    </h2>
+    <div class="headerRow">
+        <span class="sideSpaced"></span>
+        <h2 class="pageHeader textCentered">
+            Meals
+        </h2>
+        <button class="sideSpaced addButton buttonStyled" (click)="goToAddMeal()">+</button>
+    </div>
     <div class="filters">
         Filters
     </div>

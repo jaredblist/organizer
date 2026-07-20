@@ -50,6 +50,10 @@
         @if (lookupService.componentView === componentViewEnum.WhatToCook) {      
             <app-meals-view></app-meals-view>
     }  -->
+
+    @if (lookupService.componentView === componentViewEnum.AddMeal) {      
+            <app-add-meal-view></app-add-meal-view>
+        }  
         
     @if (showBackButton()) {
         <div class="return">

@@ -5,5 +5,6 @@ export enum ComponentViewEnum {
   Groceries,
   WhatToCook,
   Ingredients,
-  Weekly
+  Weekly,
+  AddMeal
 }

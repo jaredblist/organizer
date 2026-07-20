@@ -3,6 +3,7 @@ import { MealService } from '../../services/meal/meal-service';
 import { Meal } from '../../models/meals/meal.model';
 import { IndividualMealView } from "../individual-meal-view/individual-meal-view";
 import { LookupService } from '../../services/utility/lookup-service';
+import { ComponentViewEnum } from '../../models/enums/component-view.model';
 
 @Component({
   selector: 'app-meals-view',
@@ -33,6 +34,10 @@ export class MealsView {
 
   getMealImage(meal: Meal) {
     return this.lookupService.getMealImage(meal.name);
+  }
+
+  goToAddMeal() {
+    this.lookupService.componentView = ComponentViewEnum.AddMeal;
   }
 
   setupDisplay(): void {    

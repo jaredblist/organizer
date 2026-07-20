@@ -85,3 +85,17 @@ table tr td:nth-child(3n-2) {
 .mealList {
     height: 100%;
 }
+
+.sideSpaced {
+    width: 3rem;
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.addButton {
+    height: 3rem;
+    margin: auto 0;
+}
